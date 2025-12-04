@@ -1,6 +1,17 @@
-name: Init
+name: GitHub Actions Demo
 
-on: [create, workflow_dispatch]
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.github/**'
+
+  schedule:
+   - cron: '15 5 * * 0'
+      
+  
+  
 
 permissions: 
   issues: write
