@@ -1,0 +1,14 @@
+name: Hello World
+
+on: [workflow_dispatch]
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greeting
+        run: echo "Hello World 👋"
+      - name: Checkout
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
+      - name: GitHub Context
+        run: echo '${{ toJSON(github) }}'
